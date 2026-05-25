@@ -1,0 +1,142 @@
+:root {
+  --text-color: #f3f4f8;
+  --muted-text: #cfd3de;
+  --card-border: rgba(255, 255, 255, 0.22);
+  --card-bg: rgba(9, 12, 22, 0.72);
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.28);
+  --danger: #c97a86;
+  --success: #7fb39a;
+  --info: #8ea6c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.5px;
+  background: linear-gradient(rgba(12, 15, 24, 0.82), rgba(12, 15, 24, 0.88)),
+    url('./assets/img/1098242.jpg') no-repeat center / cover;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.appTopName {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  font-size: clamp(1.3rem, 3.2vw, 1.9rem);
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background: rgba(7, 10, 20, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.appFooter {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  color: var(--muted-text);
+  background: rgba(7, 10, 20, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 14px 60px;
+}
+
+.interface {
+  width: 100%;
+  max-width: 560px;
+}
+
+.containerCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  transition: border-color 0.2s ease;
+}
+
+.cardLose {
+  border-color: rgba(201, 122, 134, 0.8);
+}
+
+.cardWin {
+  border-color: rgba(127, 179, 154, 0.8);
+}
+
+.red {
+  color: var(--danger);
+}
+
+.green {
+  color: var(--success);
+}
+
+.blue {
+  color: var(--info);
+}
+
+button {
+  font-family: inherit;
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 64px 10px 56px;
+  }
+
+  .card {
+    border-radius: 12px;
+    padding: 16px 12px;
+  }
+}

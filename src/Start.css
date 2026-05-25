@@ -1,0 +1,164 @@
+@import url(./index.css);
+
+button {
+  cursor: pointer;
+}
+
+.cardHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sectionKicker {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.levelCont,
+.intervalCont {
+  width: 100%;
+}
+
+.sectionBox {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.levelHead {
+  width: 100%;
+  margin: 0 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.levelHead h2 {
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  color: var(--muted-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.labelIcon {
+  opacity: 0.9;
+}
+
+.turn span {
+  min-width: 24px;
+  display: inline-block;
+  text-align: center;
+}
+
+.levelBtn,
+.intervalBtn {
+  display: grid;
+  gap: 8px;
+}
+
+.levelBtn {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.intervalBtn {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.levelBtn button,
+.intervalBtn button {
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: clamp(0.86rem, 2.1vw, 1rem);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.levelBtn button:hover,
+.intervalBtn button:hover {
+  border-color: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.levelBtn button.active,
+.intervalBtn button.active {
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.intervalHead {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--muted-text);
+}
+
+.intervalHead h2 {
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intervalHead span {
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.contButton button {
+  min-width: 160px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(140deg, rgba(96, 108, 130, 0.95), rgba(74, 84, 104, 0.92));
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.98rem;
+  transition: filter 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contButton button:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .levelBtn {
+    grid-template-columns: 1fr;
+  }
+
+  .intervalBtn {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
