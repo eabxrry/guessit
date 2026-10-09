@@ -76,7 +76,6 @@ src/
 ├── index.css          # Global styles
 └── main.jsx           # React entry point
 ```
-
 ---
 
 ## Author
